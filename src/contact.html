@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./output.css" />
+  </head>
+  <body class="bg-blue-950">
+    <header
+      class="flex items-center justify-between text-white pt-7 pb-4 z-50 top-0 sticky bg-blue-950 border-b-4 px-8 border-b-amber-50 border-solid"
+    >
+      <!-- Logo -->
+      <a href="#" class="text-2xl font-bold">XantSpace.</a>
+
+      <!-- Hamburger Button (Mobile) -->
+      <button id="menu-btn" class="md:hidden focus:outline-none">
+        <svg
+          id="hamburger-icon"
+          class="w-7 h-7"
+          fill="none"
+          stroke="white"
+          viewBox="0 0 24 24"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M4 6h16M4 12h16M4 18h16"
+          />
+        </svg>
+
+        <svg
+          id="close-icon"
+          class="w-7 h-7 hidden"
+          fill="none"
+          stroke="white"
+          viewBox="0 0 24 24"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M6 18L18 6M6 6l12 12"
+          />
+        </svg>
+      </button>
+
+      <!-- DESKTOP NAV -->
+      <nav class="hidden md:flex items-center gap-6">
+        <ul class="flex gap-6">
+          <li>
+            <a href="index.html" class="hover:font-bold transition duration-700"
+              >Home</a
+            >
+          </li>
+          <li>
+            <a href="#" class="hover:font-bold transition duration-700"
+              >Project</a
+            >
+          </li>
+          <li>
+            <a href="#" class="hover:font-bold transition duration-700"
+              >Contact</a
+            >
+          </li>
+        </ul>
+
+        <a
+          href="#"
+          class="bg-blue-700 px-4 py-2 rounded-2xl font-medium flex gap-2 items-center"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            fill="white"
+            class="bi bi-download"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5"
+            />
+            <path
+              d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708z"
+            />
+          </svg>
+          Resumé
+        </a>
+      </nav>
+    </header>
+
+    <!-- MOBILE SIDEBAR -->
+    <div
+      id="sidebar"
+      class="fixed top-0 left-0 h-full w-64 bg-blue-950 transform -translate-x-full transition-transform duration-300 z-40 p-6 flex flex-col gap-6"
+    >
+      <ul class="flex flex-col gap-4 mt-10 pt-10">
+        <li>
+          <a href="index.html" class="text-white text-lg hover:font-bold"
+            >Home</a
+          >
+        </li>
+        <li>
+          <a href="#" class="text-white text-lg hover:font-bold">Project</a>
+        </li>
+        <li>
+          <a href="#" class="text-white text-lg hover:font-bold">Contact</a>
+        </li>
+      </ul>
+
+      <a
+        href="#"
+        class="bg-blue-700 px-4 py-2 rounded-2xl font-medium flex gap-1 w-max mt-3 items-center text-amber-50"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="16"
+          height="16"
+          fill="white"
+          class="bi bi-download"
+          viewBox="0 0 16 16"
+        >
+          <path
+            d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5"
+          />
+          <path
+            d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708z"
+          />
+        </svg>
+        Resumé
+      </a>
+    </div>
+
+    <!-- BACKDROP -->
+    <div
+      id="backdrop"
+      class="fixed inset-0 backdrop-blur-3xl hidden z-30"
+    ></div>
+    <main class="mx-auto px-20 pt-7 max-md:px-5">
+      <section class="text-white max-md:h-[30vh] max-md:block mx-auto">
+        <h1 class="text-4xl text-amber-50 font-bold">Get In Touch</h1>
+        <p class="text-gray-400 py-2.5 px-2.5">
+          i am always open to discussing new projects, creative ideas or
+          opportunities <br />
+          to be part of an amazing team, Feel free to reach out using the form
+          or <br />
+          connect me through other channels.
+        </p>
+      </section>
+      <section class="grid grid-cols-2 gap-x-10 text-white max-md:block">
+        <form
+          action=""
+          method="post"
+          class="bg-gray-900 rounded-2xl p-5 mt-3.5 max-md:w-full"
+        >
+          <h2 class="text-2xl font-bold pb-2">Send a message</h2>
+          <div class="flex max-md:block w-full">
+            <div>
+              <label for="name">Name:</label> <br />
+              <input
+                class="px-1.5 py-1.5 border-2 outline-0 border-solid border-gray-500 rounded-[5px] mt-1 w-full"
+                type="text"
+                name="name"
+                id="name"
+                placeholder="Input Your Name"
+                required
+              />
+            </div>
+            <div class="px-2 max-md:px-0">
+              <label for="email">Email:</label> <br />
+              <input
+                class="px-1.5 py-1.5 border-2 outline-0 border-solid border-gray-500 rounded-[5px] mt-1 w-full"
+                type="email"
+                name="email"
+                id="email"
+                placeholder="Input Your Email"
+                required
+              />
+            </div>
+          </div>
+          <br />
+          <div>
+            <label for="message">Message Me:</label><br />
+            <textarea
+              class="px-1.5 py-1.5 border-2 outline-0 border-solid border-gray-500 mt-1 max-md:w-full w-full"
+              name="message"
+              id="message"
+              cols="55"
+              rows="5"
+              placeholder="Your Message"
+              required
+            ></textarea>
+          </div>
+          <br />
+          <button
+            class="bg-blue-700 w-full py-2 font-bold rounded-[10px]"
+            type="submit"
+          >
+            Send Message
+          </button>
+        </form>
+        <!--Desktop version-->
+        <div>
+          <h3
+            class="font-bold text-[23px] pb-2 max-md:text-[18px] max-md:pb-1 max-md:pt-2"
+          >
+            Other ways to connect
+          </h3>
+          <div class="max-md:flex max-md:justify-between max-md:items-center">
+            <div>
+              <div class="flex gap-2.5 items-center max-md:items-start">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="30"
+                  height="30"
+                  fill="currentColor"
+                  class="bi bi-envelope-at-fill"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M2 2A2 2 0 0 0 .05 3.555L8 8.414l7.95-4.859A2 2 0 0 0 14 2zm-2 9.8V4.698l5.803 3.546zm6.761-2.97-6.57 4.026A2 2 0 0 0 2 14h6.256A4.5 4.5 0 0 1 8 12.5a4.49 4.49 0 0 1 1.606-3.446l-.367-.225L8 9.586zM16 9.671V4.697l-5.803 3.546.338.208A4.5 4.5 0 0 1 12.5 8c1.414 0 2.675.652 3.5 1.671"
+                  />
+                  <path
+                    d="M15.834 12.244c0 1.168-.577 2.025-1.587 2.025-.503 0-1.002-.228-1.12-.648h-.043c-.118.416-.543.643-1.015.643-.77 0-1.259-.542-1.259-1.434v-.529c0-.844.481-1.4 1.26-1.4.585 0 .87.333.953.63h.03v-.568h.905v2.19c0 .272.18.42.411.42.315 0 .639-.415.639-1.39v-.118c0-1.277-.95-2.326-2.484-2.326h-.04c-1.582 0-2.64 1.067-2.64 2.724v.157c0 1.867 1.237 2.654 2.57 2.654h.045c.507 0 .935-.07 1.18-.18v.731c-.219.1-.643.175-1.237.175h-.044C10.438 16 9 14.82 9 12.646v-.214C9 10.36 10.421 9 12.485 9h.035c2.12 0 3.314 1.43 3.314 3.034zm-4.04.21v.227c0 .586.227.8.581.8.31 0 .564-.17.564-.743v-.367c0-.516-.275-.708-.572-.708-.346 0-.573.245-.573.791"
+                  />
+                </svg>
+                <div class="leading-4">
+                  <p>
+                    <span class="font-bold">Email</span> <br />
+                    <span class="text-[15px]"
+                      ><a href="xantspace.dev@gmail.com"
+                        >xantspace.dev@gmail.com</a
+                      ></span
+                    >
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div>
+              <!---Social Profiles-->
+              <div class="pt-4">
+                <h4 class="font-bold text-[20px] pb-2">Social Pofiles</h4>
+                <div>
+                  <ul class="flex space-x-3">
+                    <li>
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="w-6 h-6 text-blue-600 hover:text-amber-50 duration-700 cursor-pointer"
+                        viewBox="0 0 16 16"
+                        fill="currentColor"
+                      >
+                        <path
+                          d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82A6.65 6.65 0 0 1 8 4.06c.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8"
+                        />
+                      </svg>
+                    </li>
+                    <li>
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="w-6 h-6 text-blue-600 hover:text-amber-50 duration-700 cursor-pointer"
+                        viewBox="0 0 16 16"
+                        fill="currentColor"
+                      >
+                        <path
+                          d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z"
+                        />
+                      </svg>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--end of div-->
+        </div>
+      </section>
+    </main>
+    <footer class="bg-gray-800 text-white p-10 px-20 mt-10 max-md:px-2.5">
+      <nav class="flex justify-center">
+        <ul class="flex gap-5">
+          <li>
+            <a
+              href="#"
+              class="text-gray-400 hover:text-amber-50 transition duration-700"
+              >Projects</a
+            >
+          </li>
+          <li>
+            <a
+              href="#"
+              class="text-gray-400 hover:text-amber-50 transition duration-700"
+              >About</a
+            >
+          </li>
+          <li>
+            <a
+              href="contact.html"
+              class="text-gray-400 hover:text-amber-50 transition duration-700"
+              >Contact</a
+            >
+          </li>
+        </ul>
+      </nav>
+      <div>
+        <ul class="flex justify-center items-center gap-6 pt-3.5">
+          <li>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="w-6 h-6 text-blue-600 hover:text-amber-50 duration-700 cursor-pointer"
+              viewBox="0 0 16 16"
+              fill="currentColor"
+            >
+              <path
+                d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82A6.65 6.65 0 0 1 8 4.06c.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8"
+              />
+            </svg>
+          </li>
+
+          <li>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="w-6 h-6 text-blue-600 hover:text-amber-50 duration-700 cursor-pointer"
+              viewBox="0 0 16 16"
+              fill="currentColor"
+            >
+              <path
+                d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z"
+              />
+            </svg>
+          </li>
+        </ul>
+      </div>
+      <div class="flex items-center justify-between max-md:space-x-6 mt-3.5">
+        <small class="text-gray-400"
+          >&copy;2025 All Rights Reserved <br />
+          This is the Official Portfolio of
+          <span class="text-amber-50 font-bold">XantSpace_Dev</span></small
+        >
+        <p>XantSpace.Hq</p>
+      </div>
+    </footer>
+
+    <script>
+      const menuBtn = document.getElementById("menu-btn");
+      const sidebar = document.getElementById("sidebar");
+      const backdrop = document.getElementById("backdrop");
+      const hamburgerIcon = document.getElementById("hamburger-icon");
+      const closeIcon = document.getElementById("close-icon");
+
+      menuBtn.addEventListener("click", () => {
+        sidebar.classList.toggle("-translate-x-full");
+        backdrop.classList.toggle("hidden");
+        hamburgerIcon.classList.toggle("hidden");
+        closeIcon.classList.toggle("hidden");
+      });
+
+      backdrop.addEventListener("click", () => {
+        sidebar.classList.add("-translate-x-full");
+        backdrop.classList.add("hidden");
+        hamburgerIcon.classList.remove("hidden");
+        closeIcon.classList.add("hidden");
+      });
+    </script>
+  </body>
+</html>
